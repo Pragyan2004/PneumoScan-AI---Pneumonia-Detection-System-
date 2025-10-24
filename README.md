@@ -61,12 +61,10 @@ Built with **TensorFlow** and **Flask**, this application provides rapid, accura
 
 ```bash
 # Clone the repository
-git clone https://github.com/pragyan2004/pneumoscan-ai.git
-cd pneumoscan-ai
+git clone https://github.com/Pragyan2004/PneumoScan-AI---Pneumonia-Detection-System-.git
+cd PneumoScan-AI---Pneumonia-Detection-System-
 
-# Create virtual environment
-python -m venv pneumoscan_env
-source pneumoscan_env/bin/activate  # On Windows: pneumoscan_env\Scripts\activate
+
 ```
 ---
 ### 💻 Usage

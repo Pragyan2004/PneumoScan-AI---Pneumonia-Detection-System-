@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="results-section">
+    <div class="container">
+        <div class="results-header">
+            <h1 class="section-title">Analysis Results</h1>
+            <p class="section-subtitle">AI-powered pneumonia detection results</p>
+        </div>
+
+        <div class="results-content">
+            <div class="results-grid">
+                <div class="result-card image-card">
+                    <h3>X-Ray Image</h3>
+                    <div class="image-container">
+                        <img id="resultImage" src="" alt="Analyzed X-Ray">
+                    </div>
+                </div>
+
+                <div class="result-card analysis-card">
+                    <h3>AI Analysis</h3>
+                    <div class="result-indicator">
+                        <div class="result-badge" id="resultBadge">
+                            <span id="resultText">Analyzing...</span>
+                        </div>
+                        <div class="confidence-score">
+                            Confidence: <span id="confidenceValue">0%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="confidence-chart">
+                        <img id="confidenceChart" src="" alt="Confidence Chart">
+                    </div>
+
+                    <div class="result-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Analysis Time:</span>
+                            <span id="analysisTime">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Image Quality:</span>
+                            <span id="imageQuality">Good</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Model Version:</span>
+                            <span>v2.5.1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendations-card">
+                <h3>Clinical Recommendations</h3>
+                <div id="normalRecommendations" class="recommendation-content" style="display: none;">
+                    <p>✅ <strong>No signs of pneumonia detected.</strong> The chest X-ray appears normal.</p>
+                    <ul>
+                        <li>Continue routine clinical monitoring as appropriate</li>
+                        <li>Consider other diagnoses if symptoms persist</li>
+                        <li>Follow standard clinical protocols</li>
+                    </ul>
+                </div>
+                <div id="pneumoniaRecommendations" class="recommendation-content" style="display: none;">
+                    <p>⚠️ <strong>Pneumonia indicators detected.</strong> Further evaluation recommended.</p>
+                    <ul>
+                        <li>Consult with a pulmonologist or infectious disease specialist</li>
+                        <li>Consider additional diagnostic tests if clinically indicated</li>
+                        <li>Initiate appropriate treatment based on clinical findings</li>
+                        <li>Monitor patient's respiratory status closely</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="{{ url_for('upload') }}" class="btn btn-primary">Analyze Another Image</a>
+                <button class="btn btn-secondary" onclick="window.print()">Print Report</button>
+                <button class="btn btn-outline" id="shareBtn">Share Results</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

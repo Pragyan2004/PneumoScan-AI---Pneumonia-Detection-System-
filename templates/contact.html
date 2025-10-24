@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-header">
+            <h1 class="section-title">Contact Us</h1>
+            <p class="section-subtitle">Get in touch with our team for support or inquiries</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>We're here to help healthcare professionals integrate AI into their diagnostic workflows.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">📧</div>
+                        <div class="method-content">
+                            <h4>Email</h4>
+                            <p>contact@pneumoscan.ai</p>
+                            <span>Response within 24 hours</span>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon">📞</div>
+                        <div class="method-content">
+                            <h4>Phone</h4>
+                            <p>XXX XXX XXXX -HELP</p>
+                            <span>Mon-Fri, 9AM-5PM EST</span>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon">🏢</div>
+                        <div class="method-content">
+                            <h4>Office</h4>
+                            <p>ABC</p>
+                            <p>XYZ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emergency-notice">
+                    <h4>⚠️ Medical Emergency</h4>
+                    <p>If this is a medical emergency, please call your local emergency services immediately. This platform is for non-emergency inquiries only.</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="institution">Medical Institution</label>
+                        <input type="text" id="institution" name="institution">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="partnership">Partnership Inquiry</option>
+                            <option value="feedback">Product Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-text">Send Message</span>
+                        <div class="loading-spinner" style="display: none;"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="successModal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeSuccessModal()">&times;</span>
+        <div class="success-icon">✅</div>
+        <h3>Message Sent Successfully!</h3>
+        <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+        <button class="btn btn-primary" onclick="closeSuccessModal()">OK</button>
+    </div>
+</div>
+{% endblock %}

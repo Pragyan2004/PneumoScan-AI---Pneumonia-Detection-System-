@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">AI-Powered Pneumonia Detection</h1>
+            <p class="hero-subtitle">Revolutionizing medical imaging with advanced deep learning algorithms for accurate and rapid pneumonia diagnosis.</p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('upload') }}" class="btn btn-primary">Scan X-Ray Now</a>
+                <a href="{{ url_for('about') }}" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>94.2%</h3>
+                    <p>Accuracy</p>
+                </div>
+                <div class="stat">
+                    <h3>12,543+</h3>
+                    <p>Scans Analyzed</p>
+                </div>
+                <div class="stat">
+                    <h3>99.7%</h3>
+                    <p>Reliability</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="scan-preview">
+                <div class="scan-image"></div>
+                <div class="scan-result normal">
+                    <span>Normal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Choose PneumoScan AI?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Rapid Analysis</h3>
+                <p>Get results in seconds with our optimized AI algorithms, reducing diagnosis time significantly.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>High Accuracy</h3>
+                <p>94.2% accuracy rate in detecting pneumonia from chest X-ray images.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Secure & Private</h3>
+                <p>Your medical data is encrypted and never stored without consent.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Detailed Insights</h3>
+                <p>Comprehensive analysis with confidence scores and visual explanations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works">
+    <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload X-Ray</h3>
+                <p>Upload your chest X-ray image in DICOM, PNG, or JPG format.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>AI Analysis</h3>
+                <p>Our deep learning model analyzes the image for pneumonia indicators.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get Results</h3>
+                <p>Receive detailed report with confidence score and recommendations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -16,6 +16,9 @@ Built with **TensorFlow** and **Flask**, this application provides rapid, accura
 ✅ **Multi-format Support:** JPG, PNG, and DICOM  
 ---
 
+## live URL 
+            https://pneumoscanai-qlxl.onrender.com
+
 ## 📸 Screenshots  
 
 ### 🏠 Homepage  

@@ -1,22 +1,16 @@
-Flask==3.0.0
-gunicorn==21.2.0
-
-tensorflow==2.15.0
-numpy==1.26.4
-scipy==1.11.4
-
-pillow==10.2.0
-opencv-python==4.9.0.80
-
-matplotlib==3.8.2
-seaborn==0.13.2
-
-scikit-learn==1.4.0
-
-h5py==3.10.0
-pickle-mixin==1.0.2
-
-werkzeug==3.0.1
+Flask
+gunicorn
+tensorflow
+numpy
+scipy
+pillow
+opencv-python
+matplotlib
+seaborn
+scikit-learn
+h5py
+pickle-mixin
+werkzeug
 
 
 
